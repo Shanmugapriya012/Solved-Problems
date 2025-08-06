@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int c=(int)Math.log10(n)+1;
+        int square=n*n;
+        
+        int square1=square%(int)Math.pow(10,c);
+
+        if(square1==n){
+            System.out.println("Automorphic");
+        }else{
+            System.out.println("Not Automorphic");
+        }
+    }
+}
